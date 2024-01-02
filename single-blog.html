@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Working of a limited slip differential (LSD)</title>
+    <meta content="Limited Slip Differentials (LSD) are used in automobile to overcome the traction difference problem of drive wheels. In this article working of LSD is explained 
+        in a logical manner." name="description">
+    <meta content="Limited Slip Differentials (LSD), features of LSD, components of a standard differential, "
+        name="keyword">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+
+    <!-- Favicons -->
+    <link href="../img/lesics-logo.png" rel="icon">
+    <link href="../img/lesics-logo.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,
+    600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="../vendor/aos/aos.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="canonical" href="working-of-a-limited-slip-differential.html">
+
+    <!-- Include Header Footer -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $("#sidebar").load("sidebar.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="../index.html#hero" class="logo d-flex align-items-center">
+                <img src="../img/lesics-logo.png" alt="">
+                <span>Lesics</span>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="../index.html#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="../index.html#services">Services</a></li>
+                    <li><a href="../career.html">Career</a></li>
+                    <li class="dropdown"><a href="../blog.html"><span>Blog</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="automobile.html">Automobile</a></li>
+                            <li><a href="electronics.html">Electronics</a></li>
+                            <li><a href="electrical-machines.html">Electrical Machines</a></li>
+                            <li><a href="energy.html">Energy</a></li>
+                            <li><a href="mechanical-design.html">Mechanical Design</a></li>
+                            <li><a href="aerospace.html">Aerospace</a></li>
+                            <li><a href="telecommunication.html">Telecommunication</a></li>
+                            <li><a href="civil-engineering.html">Civil Engineering</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="../index.html#contact">Contact</a></li>
+                    <li><a class="getstarted scrollto" href="https://www.patreon.com/Lesics" target="_blank">Support
+                            Us</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../Automobile.html">Automobile</a></li>
+                    <li>Working of a limited slip differential (LSD)</li>
+                </ol>
+                <h2>Working of a limited slip differential (LSD)</h2>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <!-- ======= Blog Single Section ======= -->
+        <section id="blog" class="blog">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-8 entries">
+
+                        <article class="entry entry-single">
+
+                            <div class="entry-img">
+                                <img src="../img/blog/Automobile/LSD_friction_steel-plates.jpg" alt=""
+                                    class="img-fluid">
+                            </div>
+
+                            <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">Sabin
+                                            Mathew</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                                            href="#"><time>22 May, 2014</time></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-content">
+                                <p>
+                                    Limited Slip Differentials (LSD) are used in automobile to overcome the traction
+                                    difference problem of drive wheels. In this article working of LSD is explained in a
+                                    logical manner.
+                                </p>
+
+                                <h3>The problem with the standard differential</h3>
+
+                                <p>
+                                    Consider a situation where a vehicle fitted with a standard differential moves
+                                    straight, and one drive wheel is on a surface with good traction and the other wheel
+                                    is on a slippery track. In a standard differential the left and right axle rotations
+                                    are completely independent. Since one wheel is on a slippery track, the standard
+                                    differential will make that wheel spin in excessive speed, while the good traction
+                                    wheel will remain almost dead. This means high power supply to the slippery
+                                    wheel and low power flow to the good traction wheel. So the vehicle won’t be able to
+                                    move.
+                                </p>
+                                <img src="../img/blog/Automobile/traction-difference-problem.jpg" class="img-fluid"
+                                    alt="">
+                                <figcaption>Fig 1 : Engine is transferred to the wheel with low traction</figcaption>
+
+                                <p>
+                                    One way to overcome this problem is to limit the independency or relative motion
+                                    between the left and
+                                    right axles. Limited slip differentials are introduced for this purpose. One of the
+                                    most commonly used
+                                    LSD technology is clutch-pack based.
+                                </p>
+
+                                <h3>Constructional features of LSD</h3>
+                                <p>
+                                    First we will go through constructional features of LSD. The basic components of a
+                                    standard
+                                    differential are shown below. It has got pinion gear, ring gear, case, spider gears
+                                    and side gears.
+                                </p>
+                                <img src="../img/blog/Automobile/differential-components.jpg" class="img-fluid" alt="">
+                                <figcaption>Fig 2 :The basic components of a standard differential</figcaption>
+
+                                <p>To understand working of a standard differential please check this link . Apart from
+                                    its basic
+                                    components a Limited slip differential has got a series of friction and steel plates
+                                    packed between
+                                    the side gear and the casing. Friction discs are having internal teeth and they are
+                                    locked with the
+                                    splines of the side gear. So the friction discs and the side gear will always move
+                                    together.</p>
+
+                                <img src="../img/blog/Automobile/LSD_friction_steel-plates.jpg" class="img-fluid"
+                                    alt="">
+                                <figcaption>Fig 3 : The basic components of a standard differential</figcaption>
+
+                                <p>Steels plates are having external tabs and are made to fit in the case groove. So
+                                    they can rotate
+                                    with the case. If any of the clutch pack assembly is well pressed, the frictional
+                                    force within them
+                                    will make it move as a single solid unit. Since steel plates are locked with the
+                                    case and friction
+                                    discs with the side gear, in a well pressed clutch pack casing and the clutch pack
+                                    will move together.
+                                    or motion from the casing is directly passed to the corresponding axle. Space
+                                    between the side gears
+                                    is fitted with a pre-load spring. Pre load spring will always give a thrust force
+                                    and will press
+                                    clutch pack together.</p>
+
+                                <img src="../img/blog/Automobile/pre-load-spring-LSD.jpg" class="img-fluid" alt="">
+                                <figcaption>Fig 4 : Pre-load spring in an LSD</figcaption>
+
+                                <h3>Separating action of bevel gears </h3>
+                                <p>
+                                    You can note that spider and side gear are bevel gears. It has got one specialty.
+                                    When torque is
+                                    transmitted through a bevel gear system axial forces are also induced apart from the
+                                    tangential force.
+                                    The axial force tries to separate out the gears.
+                                </p>
+                                <img src="../img/blog/Automobile/bevel-gear-action.jpg" class="img-fluid" alt="">
+                                <figcaption>Fig 5 : bevel gear system axial forces</figcaption>
+                                <p>
+                                    You can note that side gear and axle are 2 separate units. The side gear has got a
+                                    small allowance for
+                                    axial movement.
+                                </p>
+                                <img src="../img/blog/Automobile/side_spider_gear-axle.jpg" class="img-fluid" alt="">
+                                <figcaption>Fig 6 : Side gear and axle</figcaption>
+                                <p>So during high torque transmission through spider-side gear arrangement, a high
+                                    separating thrust
+                                    force is also transmitted to the clutch pack. This force presses and locks the
+                                    clutch pack assembly
+                                    against wall of the casing.</p>
+
+                                <h3>Working of limited slip differential</h3>
+                                <p>Now back to the initial problem. Since one wheel is on a high traction surface, the
+                                    torque
+                                    transmitted to it will be higher. So the thrust force developed due to the bevel
+                                    gear separation
+                                    action also will be high at that side. Thus clutch pack at high traction wheel side
+                                    will be pressed
+                                    firmly and clutch pack will be locked. So power from the differential casing will
+                                    flow directly to
+                                    high traction axle via clutch pack assembly.
+                                </p>
+                                <img src="../img/blog/Automobile/high-traction-power-flow.jpg" class="img-fluid" alt="">
+                                <figcaption>Fig 6 : high traction wheel</figcaption>
+                                <p>On the other hand clutch pack on the low traction wheel side is not engaged yet, so
+                                    power flow will
+                                    be limited to that side. So the vehicle will be able to overcome the traction
+                                    difference problem.</p>
+
+                                <img src="../img/blog/Automobile/right_clutch.jpg" class="img-fluid" alt="">
+                                <figcaption>Fig 7 : Low thrust force at low traction</figcaption>
+
+                                <p>However while taking a turn the LSD can act like a normal differential. In this case
+                                    thrust force
+                                    developed due to bevel gear separation action won’t be that high. So the plates in
+                                    clutch pack will
+                                    easily overcome frictional resistance and will be able to slip against each other.
+                                    Thus the right and
+                                    left wheel can have different speed just like an open differential. Following are
+                                    the other commonly
+                                    used technologies used to overcome the drive wheel traction difference problem.</p>
+
+                                <li>Clutch pack – Pressure disk type</li>
+                                <li>Torsen®</li>
+                                <li>Cone Differential </li>
+                                <li>Hydraulic Locking Type </li>
+
+                                <p>Thank you for reading this article! </p>
+
+                            </div>
+
+                        </article><!-- End blog entry -->
+
+                    </div><!-- End blog entries list -->
+
+                    <div class="col-lg-4">
+                        <div class="blog-author d-flex align-items-center">
+
+                            <div>
+                                <img src="../img/team/Sabin-Mathew.jpg" class="rounded-circle float-left"
+                                    alt="sabin-mathew">
+                                <h4>Sabin Mathew</h4>
+                                <div class="social-links">
+                                    <a href="https://www.linkedin.com/in/sabin-mathew/" target="_blank"><i
+                                            class="biu bi-linkedin"></i></a>
+                                    <a href="https://www.youtube.com/@Lesics" target="_blank"><i
+                                            class="biu bi-youtube"></i></a>
+                                    <a href="https://twitter.com/sabinsmathew" target="_blank"><i
+                                            class="bi bi-twitter"></i></a>
+                                    <a href="https://www.facebook.com/SabinMath" target="_blank"><i
+                                            class="bi bi-facebook"></i></a>
+                                    <a href="https://www.instagram.com/sabinsmathew/" target="_blank"><i
+                                            class="biu bi-instagram"></i></a>
+                                </div>
+                                <p>
+                                    This article is written by Sabin Mathew, an IIT Delhi postgraduate in mechanical
+                                    engineering. Sabin
+                                    is passionate about understanding the physics behind complex technologies and
+                                    explaining them in
+                                    simple words. He is the founder of YouTube channel <a
+                                        href="https://www.youtube.com/@Lesics">'LESICS',</a> engineering educational
+                                    platform. To
+                                    know more about the author check <a
+                                        href="https://www.linkedin.com/in/sabin-mathew/">this link.</a>
+                                </p>
+                            </div>
+                        </div><!-- End blog author bio -->
+
+                        <div class="sidebar search-form">
+
+                            <h3 class="sidebar-title">Search</h3>
+                            <div class="sidebar-item search-form">
+                                <form action="">
+                                    <input type="text" id="inputarticle" oninput="myFunction()"
+                                        placeholder="Search Articles">
+                                    <button type="submit"><i class="bi bi-search"></i></button>
+                                </form>
+                                <!-- <form action="">
+                                <input type="text" id="inputarticle" oninput="myFunction()">
+                                <button type="submit"><i class="bi bi-search"></i></button>
+                                </form> -->
+                            </div><!-- End sidebar search formn-->
+
+                            <h3 class="sidebar-title">Recent Posts</h3>
+                            <div class="sidebar-item recent-posts">
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-1.jpg" alt="">
+                                    <h4><a href="#">How does counter steering work?</a></h4>
+                                    <time>May 16, 2022</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-2.jpg" alt="">
+                                    <h4><a href="#">Golden gate bridge : Challenges and innovation</a></h4>
+                                    <time>Jan 1, 2020</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-3.jpg" alt="">
+                                    <h4><a href="#">How does a microwave oven work?</a></h4>
+                                    <time>August 21, 2022</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-4.jpg" alt="">
+                                    <h4><a href="#">How does an inkjet printer work?</a></h4>
+                                    <time>July 25, 2022</time>
+                                </div>
+
+                                <div class="post-item clearfix">
+                                    <img src="../img/blog/blog-recent-5.jpg" alt="">
+                                    <h4><a href="#">How does an Induction Motor work?</a></h4>
+                                    <time>September 26, 2019</time>
+                                </div>
+
+
+                            </div><!-- End sidebar recent posts-->
+                            <h3 class="sidebar-title">Categories</h3>
+                            <div class="sidebar-item categories">
+                                <ul>
+                                    <li><a href="../automobile.html">Automobile <span>(13)</span></a></li>
+                                    <li><a href="../electronics.html">Electronics <span>(13)</span></a></li>
+                                    <li><a href="../electrical-machines.html">Electrical Machines<span>(17)</span></a>
+                                    </li>
+                                    <li><a href="../energy.html">Energy<span>(20)</span></a></li>
+                                    <li><a href="../mechanical-design.html">Mechanical Design<span>(16)</span></a></li>
+                                    <li><a href="../aerospace.html">Aerospace<span>(10)</span></a></li>
+                                    <li><a href="../telecommunication.html">Telecommunication<span>(9)</span></a></li>
+                                    <li><a href="../civil-engineering.html">Civil Engineering <span>(6)</span></a></li>
+                                </ul>
+                            </div><!-- End sidebar categories-->
+
+                        </div><!-- End sidebar -->
+
+                    </div><!-- End blog sidebar -->
+
+                </div>
+
+            </div>
+        </section><!-- End Blog Single Section -->
+
+    </main><!-- End #main -->
+
+    <div id="footer"></div>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../vendor/aos/aos.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

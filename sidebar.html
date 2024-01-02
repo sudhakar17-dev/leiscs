@@ -1,0 +1,287 @@
+<div class="col-lg-4">
+    <div class="blog-author d-flex align-items-center">
+
+        <div>
+            <img src="img/team/Sabin-Mathew.jpg" class="rounded-circle float-left" alt="sabin-mathew">
+            <h4>Sabin Mathew</h4>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sabin-mathew/"><i class="biu bi-linkedin" target="_blank"></i></a>
+                <a href="https://www.youtube.com/@Lesics" target="_blank"><i class="biu bi-youtube"></i></a>
+                <a href="https://twitter.com/sabinsmathew" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/SabinMath" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/sabinsmathew/" target="_blank"><i class="biu bi-instagram"></i></a>
+            </div>
+            <p><a href="https://www.youtube.com/@Lesics">'LESICS',</a> was founded by Sabin
+                Mathew, an IIT Delhi post graduate in 2012. At
+                Lesics, we aim to provide quality engineering education through our products and
+                videos. Our videos are designed to clear misconceptions, create a passion for
+                engineering and explain complicated technologies in a simple way. Our aim here
+                is to present people with the so-called 'tough engineering concepts' in a
+                logical and simple way. Our educational products hold unique design and are
+                patented. After using these products you will be amazed to understand how
+                different electro mechanical systems work together to produce unpredictable
+                outputs. To understand the secret of our products you have to study the physics
+                and engineering behind them. This way you will make your fundamentals strong in
+                a practical way. If you ever wondered, what's the meaning of Lesics - Learn
+                Engineering through PhySICS.
+
+            </p>
+        </div>
+    </div><!-- End blog author bio -->
+
+    <div class="sidebar">
+    
+        <h3 class="sidebar-title">Search</h3>
+        <div class="sidebar-item search-form" style="margin-bottom: 0px !important;">
+            <form action="">
+                <input type="text" id="searchInput" placeholder="Search Articles">
+                <button onclick="searchBlog()" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+            <br>
+            <!-- <form action="">
+              <input type="text" id="inputarticle" oninput="myFunction()">
+              <button type="submit"><i class="bi bi-search"></i></button>
+            </form> -->
+            <!-- <div id="searchResults"></div>
+    
+            </div>End sidebar search form -->
+    
+            <div class="container recent-posts">
+                <!-- <h1>Blog Search</h1> -->
+    
+                <!-- <input type="text" id="searchInput" placeholder="Search Articles..."> <br> <br> -->
+                <!-- <button onclick="searchBlog()">Search</button> -->
+                <!-- Suggestions container added here -->
+                <div id="suggestions"></div>
+    
+                <div id="searchResults"></div>
+    
+            </div>
+        </div>
+    
+    </div><!-- End sidebar -->
+
+    <div class="sidebar">
+        <h3 class="sidebar-title">Recent Posts</h3>
+        <div class="sidebar-item recent-posts">
+            <div class="post-item clearfix">
+                <img src="img/blog/Automobile/limited-slip-differential/LSD_friction_steel-plates.jpg" alt="">
+                <h4><a href="Automobile/working-of-a-limited-slip-differential.html">Working of a limited slip
+                        differential (LSD)</a></h4>
+                <time> 22 May, 2014</time>
+            </div>
+
+            <div class="post-item clearfix">
+                <img src="img/blog/Energy/Thermal-power-plant/thermal-power-plant.jpg" alt="">
+                <h4><a href="Energy/how-does-a-thermal-power-plant-work.html">How does a thermal power plant
+                        work?</a>
+                </h4>
+                <time>January 9, 2013</time>
+            </div>
+
+            <div class="post-item clearfix">
+                <img src="img/blog/Electronics/Microwave-oven/magnetron-is-attached-to-waveguide.jpg" alt="">
+                <h4><a href="Electronics/how-does-microwave-oven-work.html">How does a microwave oven work?</a></h4>
+                <time>August 21, 2022</time>
+            </div>
+
+            <div class="post-item clearfix">
+                <img src="img/blog/Electrical-Machines/automatic-tensioning-device/sagging-grooved-wire.jpg" alt="">
+                <h4><a href="Electrical-Machines/what-is-an-automatic-tensioning-device.html">What is an automatic
+                        tensioning device?</a></h4>
+                <time>July 18, 2022</time>
+            </div>
+
+            <div class="post-item clearfix">
+                <img src="img/blog/Mechanical-Design/Electric-train/Electric-Train.jpg" alt="">
+                <h4><a href="Mechanical-Design/how-does-an-electric-train-work.html">How does an electric train
+                        work?</a></h4>
+                <time>September 06, 2022</time>
+            </div>
+
+        </div><!-- End sidebar recent posts-->
+
+    </div>
+
+    <div class="sidebar">
+        <h3 class="sidebar-title">Categories</h3>
+        <div class="sidebar-item categories">
+            <ul>
+                <li><a href="../automobile.html">Automobile <span>(13)</span></a></li>
+                <li><a href="../electronics.html">Electronics <span>(13)</span></a></li>
+                <li><a href="../electrical-machines.html">Electrical Machines<span>(17)</span></a>
+                </li>
+                <li><a href="../energy.html">Energy<span>(20)</span></a></li>
+                <li><a href="../mechanical-design.html">Mechanical Design<span>(16)</span></a></li>
+                <li><a href="../aerospace.html">Aerospace<span>(10)</span></a></li>
+                <li><a href="../telecommunication.html">Telecommunication<span>(9)</span></a></li>
+                <li><a href="../civil-engineering.html">Civil Engineering <span>(6)</span></a></li>
+            </ul>
+        </div><!-- End sidebar categories-->
+    </div>
+
+</div><!-- End blog sidebar -->
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const suggestionsContainer = document.getElementById('suggestions');
+
+    // Add an event listener for the input event on the search input field
+    searchInput.addEventListener('input', function () {
+        const searchInputValue = this.value;
+
+        // Clear previous timeout (if any)
+        clearTimeout(this.timeoutId);
+
+        // Set a timeout before making the AJAX request
+        this.timeoutId = setTimeout(function () {
+            // Perform an AJAX request to the server to get suggestions
+            // You may want to use a library like Axios or fetch for this
+
+            // For simplicity, let's assume a synchronous function for demonstration
+            const suggestions = getSuggestionsFromServer(searchInputValue);
+
+            // Display the suggestions
+            displaySuggestions(suggestions);
+        }, 300); // Adjust the timeout duration as needed
+    });
+
+    // Add an event listener to close suggestions when clicking outside the search input or suggestions container
+    document.addEventListener('click', function (event) {
+        if (!searchInput.contains(event.target) && !suggestionsContainer.contains(event.target)) {
+            suggestionsContainer.style.display = 'none';
+        }
+    });
+
+    // Modify the searchOnServer function to get suggestions
+    function getSuggestionsFromServer(query) {
+        // Here, you would fetch the suggestions from the HTML content
+        const allSuggestions = [];
+
+        // Select all elements with the class 'post-item'
+        const postItems = document.querySelectorAll('.post-item');
+
+        // Iterate over the post items and extract suggestion information
+        postItems.forEach(postItem => {
+            const titleElement = postItem.querySelector('h4 a');
+            const linkElement = postItem.querySelector('h4 a');
+            const imageElement = postItem.querySelector('img');
+            const timeElement = postItem.querySelector('time');
+
+            if (titleElement && linkElement && imageElement && timeElement) {
+                const text = titleElement.textContent.trim();
+                const link = linkElement.getAttribute('href');
+                const imageSrc = imageElement.getAttribute('src');
+                const time = timeElement.textContent.trim();
+
+                // Check if the suggestion text includes the query
+                if (text.toLowerCase().includes(query.toLowerCase())) {
+                    allSuggestions.push({ text, link, imageSrc, time });
+                }
+            }
+        });
+
+        return allSuggestions;
+    }
+
+
+    // Add a new function to display suggestions with links
+    function displaySuggestions(suggestions) {
+        suggestionsContainer.innerHTML = '';
+
+        if (suggestions.length === 0) {
+            suggestionsContainer.style.display = 'none';
+        } else {
+            suggestionsContainer.style.display = 'block';
+            suggestions.forEach(suggestion => {
+                const suggestionElement = document.createElement('div');
+
+                // Create an anchor element for each suggestion with a link
+                const linkElement = document.createElement('a');
+                linkElement.textContent = suggestion.text;
+                linkElement.href = suggestion.link;
+                linkElement.target = '_blank'; // Open link in a new tab
+
+                // Add an event listener to handle suggestion selection
+                linkElement.addEventListener('click', function (event) {
+                    // Prevent the default link behavior
+                    event.preventDefault();
+
+                    // Set the selected suggestion as the search input value
+                    searchInput.value = suggestion.text;
+                    // Hide suggestions
+                    suggestionsContainer.style.display = 'none';
+                    // Trigger the search function
+                    searchBlog(suggestion.link); // Pass the link to the searchBlog function
+                });
+
+                suggestionElement.appendChild(linkElement);
+                suggestionsContainer.appendChild(suggestionElement);
+            });
+        }
+    }
+
+    // Modify the searchBlog function to handle redirection
+    function searchBlog(link) {
+        // Perform any additional logic for searching blogs here
+        console.log('Searching for:', searchInput.value);
+
+        // Redirect to the selected suggestion link
+        // window.open(link, '_blank');
+        window.location.href = link;
+    }
+
+    // Modify the displaySuggestions function to include time
+    function displaySuggestions(suggestions) {
+        suggestionsContainer.innerHTML = '';
+
+        if (suggestions.length === 0) {
+            suggestionsContainer.style.display = 'none';
+        } else {
+            suggestionsContainer.style.display = 'block';
+            suggestions.forEach(suggestion => {
+                const suggestionElement = document.createElement('div');
+
+                // Create an anchor element for each suggestion with a link
+                const linkElement = document.createElement('a');
+                linkElement.href = suggestion.link;
+                linkElement.target = '_blank'; // Open link in a new tab
+
+                // Create an image element for each suggestion
+                const imageElement = document.createElement('img');
+                imageElement.src = suggestion.imageSrc;
+                imageElement.alt = suggestion.text;
+
+                // Create a paragraph element for the suggestion text
+                const textElement = document.createElement('p');
+                textElement.textContent = suggestion.text;
+
+                // Create a time element for the suggestion time
+                const timeElement = document.createElement('time');
+                timeElement.textContent = suggestion.time;
+
+                // Append elements to the suggestion container
+                linkElement.appendChild(imageElement);
+                linkElement.appendChild(textElement);
+                linkElement.appendChild(timeElement);
+                suggestionElement.appendChild(linkElement);
+
+                // Add an event listener to handle suggestion selection
+                linkElement.addEventListener('click', function (event) {
+                    // Prevent the default link behavior
+                    event.preventDefault();
+
+                    // Set the selected suggestion as the search input value
+                    searchInput.value = suggestion.text;
+                    // Hide suggestions
+                    suggestionsContainer.style.display = 'none';
+                    // Trigger the search function
+                    searchBlog(suggestion.link); // Pass the link to the searchBlog function
+                });
+
+                suggestionsContainer.appendChild(suggestionElement);
+            });
+        }
+    }
+
+</script>
